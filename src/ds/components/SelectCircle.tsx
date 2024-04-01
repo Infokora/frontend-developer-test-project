@@ -1,12 +1,14 @@
 import React from 'react'
-import { View, StyleProp, ViewStyle } from 'react-native'
+import { StyleProp, ViewStyle } from 'react-native'
+
+import { View } from './View';
 
 import { useMergedStyle } from 'app/utils/hooks/useMergedStyle'
 import { useStylesInProps, PropsWithStyles } from 'app/utils/hooks/useStylesInProps'
 
-import styles from './Card.styles'
+import styles from './SelectCircle.style';
 
-export const Card: React.FC<
+export const SelectCircle: React.FC<
   React.PropsWithChildren<
     {
       selected?: boolean,
@@ -15,14 +17,13 @@ export const Card: React.FC<
   >
 > = ({ style, selected = false, children, ...rest }) => {
   return (
-    <View
-      style={useMergedStyle<ViewStyle>(
-        styles.container,
-        selected && styles.selectedCard,
+    <View style={
+      useMergedStyle<ViewStyle>(
+        styles.multiselectCircle,
+        selected && styles.multiselectCircleSelected,
         useStylesInProps(rest),
         style
-      )}>
-      {children}
-    </View>
+      )
+    }></View>
   )
 }

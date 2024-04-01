@@ -10,5 +10,9 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.card.border,
     borderRadius: 8
+  },
+  selectedCard: {
+    backgroundColor: colors.card.backgroundSelected,
+    borderColor: colors.card.borderSelected,
   }
 })
