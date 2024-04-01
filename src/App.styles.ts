@@ -11,7 +11,7 @@ export default StyleSheet.create({
   column: {
     flex: 1,
     height: '100%',
-    borderRightColor: '#fff',
+    borderRightColor: colors.background.main,
     borderRightWidth: 2,
   }
 })
